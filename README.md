@@ -1,4 +1,5 @@
-# Random Password Generator 
+# Random Password Generator
+This is a simple password generator built from one of Scrimba's FrontEnd Developer career path exercises. 
 
 ## Supporting Scrimba
 
