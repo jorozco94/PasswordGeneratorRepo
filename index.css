@@ -1,0 +1,74 @@
+body {
+    padding: 0;
+    min-height: 100vh;
+    background-color: #1c1c1c;
+    box-sizing: border-box;
+}
+
+.container {
+    background-color: #1f2937;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 40px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+h1 {
+    color: white;
+    max-width: 280px;
+    margin: 0;
+}
+
+.container p {
+    color: lightgrey;
+    font-size: 18px;
+    padding-bottom: 0;
+}
+
+button {
+    border: none;
+    color: white;
+    background-color: #10b981;
+    padding: 10px 15px;
+    border-radius: 8px;
+    max-width: 200px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: white;
+    color: #10b981;
+}
+
+button:active {
+    max-width: 198px;
+}
+
+hr.solid {
+    border-top: 2px solid #bbb;
+    width: 100%;
+    margin: 20px 0 20px 0;
+}
+
+.passwords {
+    display: flex;
+    justify-content: space-between;
+    /* align-items: center; */
+}
+
+.pass-container {
+    width: 240px;
+    height: 50px;
+    background-color: #273549;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.pass {
+    display: flex;
+    align-items: center;
+}
+
