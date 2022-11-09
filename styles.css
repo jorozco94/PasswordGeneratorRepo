@@ -1,10 +1,4 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
     /* CSS Vars */
     --website-bg-color: #1c1c1c;
 
@@ -18,9 +12,15 @@ body {
 
     --large-font: 20px;
     --standard-font: 16px;
-
-    background-color: var(--website-bg-color);
+    
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: var(--website-bg-color);
 }
 
 .app-container {
