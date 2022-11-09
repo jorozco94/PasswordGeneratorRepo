@@ -1,45 +1,67 @@
-body {
-    min-height: 100vh;
+* {
+    margin: 0;
     padding: 0;
-    background-color: #1c1c1c;
     box-sizing: border-box;
 }
 
-.container {
-    background-color: #1f2937;
+body {
+    /* CSS Vars */
+    --website-bg-color: #1c1c1c;
+
+    --app-bg-color: #1f2937;
+    --app-text-color: lightgrey;
+    --button-main-color: #10b981;
+    --password-lighter-bg-color: #273549;
+
+    --default-spacing: 20px;
+    --default-border-rad: 10px;
+
+    --large-font: 20px;
+    --standard-font: 16px;
+
+    background-color: var(--website-bg-color);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.app-container {
+    background-color: var(--app-bg-color);
     max-width: 500px;
     display: flex;
     flex-direction: column;
     padding: 20px 40px;
     margin-left: auto;
     margin-right: auto;
+    margin-top: var(--default-spacing);
+    border-radius: var(--default-border-rad);
 }
 
 h1 {
-    color: white;
+    color: var(--app-text-color);
     max-width: 280px;
-    margin: 0;
+    margin-bottom: var(--default-spacing);
+    font-size: var(--large-font);
 }
 
-.container p {
-    color: lightgrey;
-    font-size: 18px;
-    padding-bottom: 0;
+.app-container p {
+    color: var(--app-text-color);
+    font-size: var(--standard-font);
 }
 
 button {
     border: none;
-    color: white;
-    background-color: #10b981;
+    color: var(--app-text-color);
+    background-color: var(--button-main-color);
     padding: 10px 15px;
-    border-radius: 8px;
+    border-radius: var(--default-border-rad);
     max-width: 200px;
     cursor: pointer;
+    margin-top: var(--default-spacing);
+    font-size: var(--standard-font);
 }
 
 button:hover {
-    background-color: white;
-    color: #10b981;
+    background-color: var(--app-text-color);
+    color: var(--button-main-color);
 }
 
 button:active {
@@ -47,22 +69,25 @@ button:active {
 }
 
 hr.solid {
-    border-top: 2px solid #bbb;
+    border-top: 2px solid var(--app-text-color);
     width: 100%;
-    margin: 20px 0 20px 0;
+    margin: var(--default-spacing) 0;
 }
 
 .passwords {
     display: flex;
     justify-content: space-between;
-    /* align-items: center; */
+}
+
+.pass-container:first-child {
+    margin-right: var(--default-spacing);
 }
 
 .pass-container {
     width: 240px;
     height: 50px;
-    background-color: #273549;
-    border-radius: 10px;
+    background-color: var(--password-lighter-bg-color);
+    border-radius: var(--default-border-rad);
     display: flex;
     justify-content: center;
 }
