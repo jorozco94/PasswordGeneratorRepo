@@ -1,6 +1,4 @@
 *, *::before, *::after {
-    
-    
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -21,6 +19,14 @@
 
     --large-font: 20px;
     --standard-font: 16px;
+
+    --app-width: 500px;
+    --h1-max-width: 280px;
+    --button-width: 200px;
+    --password-container-height: 50px;
+    --password-container-width: 240px;
+    --box-shadow-dimensions: 1px;
+    --default-padding: 10px;
 }
 
 body {
@@ -29,10 +35,10 @@ body {
 
 .app-container {
     background-color: var(--app-bg-color);
-    max-width: 500px;
+    max-width: var(--app-width);
     display: flex;
     flex-direction: column;
-    padding: 20px 40px;
+    padding: calc(var(--default-padding) * 2) calc(var(--default-padding * 4));
     margin-left: auto;
     margin-right: auto;
     margin-top: var(--default-spacing);
@@ -41,7 +47,7 @@ body {
 
 h1 {
     color: var(--app-text-color);
-    max-width: 280px;
+    max-width: var(--h1-max-width);
     margin-bottom: var(--default-spacing);
     font-size: var(--large-font);
 }
@@ -55,9 +61,9 @@ button {
     border: none;
     color: var(--app-text-color);
     background-color: var(--button-main-color);
-    padding: 10px 15px;
+    padding: var(--default-padding) calc(var(--default-padding) * 1.5);
     border-radius: var(--default-border-rad);
-    max-width: 200px;
+    max-width: var(--button-width);
     cursor: pointer;
     margin-top: var(--default-spacing);
     font-size: var(--standard-font);
@@ -69,7 +75,7 @@ button:hover {
 }
 
 button:active {
-    box-shadow: -1px -1px 1px 1px var(--button-main-color);
+    box-shadow: calc(var(--box-shadow-dimensions) * -1) calc(var(--box-shadow-dimensions) *-1) var(--box-shadow-dimensions) var(--box-shadow-dimensions) var(--button-main-color);
 }
 
 hr.solid {
@@ -88,8 +94,8 @@ hr.solid {
 }
 
 .pass-container {
-    width: 240px;
-    height: 50px;
+    width: var(--password-container-width);
+    height: var(--password-container-height);
     background-color: var(--password-lighter-bg-color);
     border-radius: var(--default-border-rad);
     display: flex;
